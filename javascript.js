@@ -11,7 +11,6 @@ function getValues() {
     viernes = document.getElementById("viernes").value,
     sabado = document.getElementById("sabado").value,
     domingo = document.getElementById("domingo").value;
-
   return {
     nombreUsuario,
     lunes,
@@ -48,6 +47,9 @@ function calcHandler(e) {
   let horasrecomendadas = 56;
   let balance = horasrecomendadas - horasdormidas;
   UI(nombreUsuario, horasdormidas, balance);
+  localStorage.setItem("nombreUsuario", JSON.stringify(nombreUsuario));
+  localStorage.setItem("horasdormidas", JSON.stringify(horasdormidas));
+  localStorage.setItem("balance", JSON.stringify(balance));
 }
 
 function UI(nombreUsuario, horasdormidas, balance) {

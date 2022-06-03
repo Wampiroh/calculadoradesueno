@@ -4,9 +4,9 @@
   box-sizing: border-box;
 }
 h1,
-.navbar {
+.navbar{
   margin: 20px;
-  height: 6rem;
+  height: 7.5rem;
   border-radius: 10px;
 }
 h5 {
