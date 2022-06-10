@@ -51,7 +51,6 @@ function calcHandler(e) {
   localStorage.setItem("horasdormidas", JSON.stringify(horasdormidas));
   localStorage.setItem("balance", JSON.stringify(balance));
 }
-
 function UI(nombreUsuario, horasdormidas, balance) {
   let result = document.getElementById("result");
   let dataPrint = document.createElement("div");
@@ -75,3 +74,9 @@ function UI(nombreUsuario, horasdormidas, balance) {
 function reset() {
   document.getElementById("sleepCalc").reset();
 }
+
+function done() {
+  document.getElementById("swal").addEventListener('click', function(){
+    Swal.fire('Listo')
+  }
+)}
