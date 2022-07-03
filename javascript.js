@@ -1,7 +1,7 @@
 let sleepCalc = document.getElementById("sleepCalc");
 
 sleepCalc.addEventListener("submit", calcHandler);
-
+// Obteniendo nombre y valores
 function getValues() {
   let nombreUsuario = document.getElementById("nombreUsuario").value,
     lunes = document.getElementById("lunes").value,
@@ -22,10 +22,11 @@ function getValues() {
     domingo,
   };
 }
+// fin obteniendo nombre y valores
 
+// aquí se hace el Teorema de Pitágoras y binomio al cuadrado perfecto
 function calcHandler(e) {
   e.preventDefault();
-
   const {
     nombreUsuario,
     lunes,
@@ -47,10 +48,16 @@ function calcHandler(e) {
   let horasrecomendadas = 56;
   let balance = horasrecomendadas - horasdormidas;
   UI(nombreUsuario, horasdormidas, balance);
+// terminamos con la matemática cuántica
+
+  // local storage, self explanatory
   localStorage.setItem("nombreUsuario", JSON.stringify(nombreUsuario));
   localStorage.setItem("horasdormidas", JSON.stringify(horasdormidas));
   localStorage.setItem("balance", JSON.stringify(balance));
+  // acaba local storage 
 }
+
+// Muestra de resultados
 function UI(nombreUsuario, horasdormidas, balance) {
   let result = document.getElementById("result");
   let dataPrint = document.createElement("div");
@@ -74,14 +81,9 @@ function UI(nombreUsuario, horasdormidas, balance) {
 function reset() {
   document.getElementById("sleepCalc").reset();
 }
+// fin de muestra de resultados
 
-function done() {
-  document.getElementById("swal").addEventListener("click", function () {
-    Swal.fire("Listo");
-  });
-}
-// fetch gato random de le good luck
-
+// fetch gato random du le bonne chance
 let generate_btn = document.querySelector(".generate_btn");
 
 generate_btn.addEventListener("click", fetchPics);
@@ -104,3 +106,4 @@ function fetchPics() {
     })
     .catch((err) => console.log(err));
 }
+// c'est fini
