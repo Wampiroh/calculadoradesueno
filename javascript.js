@@ -48,13 +48,13 @@ function calcHandler(e) {
   let horasrecomendadas = 56;
   let balance = horasrecomendadas - horasdormidas;
   UI(nombreUsuario, horasdormidas, balance);
-// terminamos con la matemática cuántica
+  // terminamos con la matemática cuántica
 
   // local storage, self explanatory
   localStorage.setItem("nombreUsuario", JSON.stringify(nombreUsuario));
   localStorage.setItem("horasdormidas", JSON.stringify(horasdormidas));
   localStorage.setItem("balance", JSON.stringify(balance));
-  // acaba local storage 
+  // acaba local storage
 }
 
 // Muestra de resultados
